@@ -7,7 +7,7 @@ const password2 = document.getElementById('password2');
 // Function show Error if input is empty string
 function showError(input, massage) {
     const formControl = input.parentElement;
-    formControl.className = 'form-control error'
+    formControl.className = 'form-control error';
     const small = formControl.childNodes[5];
     small.innerText=massage;
     
@@ -17,33 +17,39 @@ function showSuccess(input) {
     const formControl = input.parentNode;
     formControl.className = 'form-control success'
 };
-// function isValidEmail(input){
-// const regExp;
-// }
 function checkRequired(fieldArray) {
     fieldArray.forEach(field => {
         if (field.value === '') {
-            console.log(field.id)
+            console.log(field.id);
             const fieldId = field.id.charAt(0).toUpperCase() + field.id.slice(1);
-            showError(field, fieldId + ' is required')
+            showError(field, fieldId + ' is required');
         }
     });
 };
 function checkLength(input, min, max) {
     if (input.value.length < min) {
-        showError(input, `${input.id} needs to be at least ${min} characters`)
+        showError(input, `${input.id} needs to be at least ${min} characters`);
     }
     else if (input.value > 10) {
-        showError(input, `${input.id} needs to be less than ${max} characters`)
+        showError(input, `${input.id} needs to be less than ${max} characters`);
     } else {
-        showSuccess(input)
+        showSuccess(input);
     }
 
 };
+function checkEmail(input) {
+    let value= input.value;
+    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if (re.test(value.trim()) && value.indexOf('.') < value.length - 3) {
+        showSuccess(input);
+    } else {
+        showError(input, `Please provide a valid Email`);
+    }
+}
 function PasswordMatach(input, input2) {
     if (input.value !== input2.value) {
 
-        showError(input2, `Passwords don't match`)
+        showError(input2, `Passwords don't match`);
     }
 };
 
@@ -52,7 +58,7 @@ form.addEventListener('submit', function (e) {
     checkRequired([userName, email, password, password2]);
     checkLength(userName, 3, 10);
     checkLength(password, 6, 30);
-    // checkEmail(email);
+    checkEmail(email);
     PasswordMatach(password, password2);
 })
 
