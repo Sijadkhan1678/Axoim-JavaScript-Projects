@@ -35,17 +35,21 @@ body{
     margin-top: 5px;
     visibility: hidden; 
 }
-.form-control.error small {
-               visibility: visible;
+.form-control.error input{
+    border-color: tomato;
+}
+.form-control.error small{
+             visibility: visible;
                color: tomato;
+               
 }
 .form-control.success input{
-               visibility: visible;
+               
               border-color: limegreen;
 }
 .form-control input{ 
-              
-               border: 0;
+              border:2px solid #ecf0f1;
+               outline: 0;
                padding: 12px; 
                border-radius: 5px;
 }
