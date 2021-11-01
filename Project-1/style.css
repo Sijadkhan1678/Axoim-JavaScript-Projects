@@ -3,7 +3,7 @@
     box-sizing: border-box;
 }
 body{
-    color: rgb(255, 255, 255);  
+    color: rgb(0, 0, 0);  
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     display: flex;
     justify-content: center;
@@ -11,13 +11,13 @@ body{
     height: 100vh;
     margin: 0px;
     
-    background-color: rgb(164, 164, 167);
+    background-color: #ecf0f1;
 }
 
 .container{
     border-radius: 6px;
     box-shadow: 1px 0px 9px black;
-    background-color: rgb(131, 53, 161);
+    background-color: white;
     border: 1px solid rgb(255, 251, 251);
     width: 390px;
        
@@ -56,13 +56,14 @@ body{
 button{
        width: 100%;
        cursor:pointer;
-       border-color: rgb(1, 111, 255);
+       border-color: navy;
        font-size: 17px;
-       background-color: rgb(55, 58, 255);
+       background-color: navy;
        border-radius: 5px; 
        color: cornsilk;
        margin-top: 19px;
        padding: 10px; 
+       outline: 0;
 }
  a{  margin-top: 13px;
     color:whitesmoke;
