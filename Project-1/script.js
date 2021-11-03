@@ -24,14 +24,17 @@ function checkRequired(fieldArray) {
             const fieldId = field.id.charAt(0).toUpperCase() + field.id.slice(1);
             showError(field, fieldId + ' is required');
         }
+        else{
+         showSuccess(field)
+        }
     });
 };
 function checkLength(input, min, max) {
     if (input.value.length < min) {
-        showError(input, `${input.id} needs to be at least ${min} characters`);
+        showError(input,`${input.id} needs to be at least ${min} characters`);
     }
     else if (input.value > 10) {
-        showError(input, `${input.id} needs to be less than ${max} characters`);
+        showError(input,`${input.id} needs to be less than ${max} characters`);
     } else {
         showSuccess(input);
     }
@@ -46,20 +49,21 @@ function checkEmail(input) {
         showError(input, `Please provide a valid Email`);
     }
 }
-function PasswordMatach(input, input2) {
-    if (input.value !== input2.value) {
-
-        showError(input2, `Passwords don't match`);
+function PasswordMatch(input1,input2) {
+    if (input1.value!==input2.value) {
+        console.log(input2.value)
+        console.log(input1.value)
+        showError(input2,"Passwords don't match");
     }
 };
 
 form.addEventListener('submit', function (e) {
     e.preventDefault();
-    checkRequired([userName, email, password, password2]);
-    checkLength(userName, 3, 10);
-    checkLength(password, 6, 30);
+    checkRequired([userName,email,password,password2]);
+    checkLength(userName,3,10);
+    checkLength(password,6,30);
     checkEmail(email);
-    PasswordMatach(password, password2);
+    PasswordMatch(password,password2);
 })
 
 
