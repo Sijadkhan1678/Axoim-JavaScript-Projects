@@ -51,8 +51,6 @@ function checkEmail(input) {
 }
 function PasswordMatch(input1,input2) {
     if (input1.value!==input2.value) {
-        console.log(input2.value)
-        console.log(input1.value)
         showError(input2,"Passwords don't match");
     }
 };

@@ -1,0 +1,71 @@
+
+body{ font-family: Arial, Helvetica, sans-serif;
+     color: whitesmoke;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     height: 100vh;
+     background-color: #055372;
+}
+.movie-select label{margin-right: 10px; font-size: 15px; }
+select{ padding: 8px 30px 8px 20px; margin-right: 10px;
+border-radius: 6px; letter-spacing: 2px;}
+.legend{
+         border-radius: 9px;
+          margin-top: 40px;
+     background-color: rgb(20, 118, 136);
+            display: flex;
+}
+.legend li { padding-bottom: 9px;
+     margin-right: 15px;
+     list-style: none;
+     display: flex;
+     
+}
+.legend li small{
+     margin-top: 13px;
+     margin-left: 9px;
+     font-size: 13px;
+}
+.seat{
+     margin-top: 10px;
+     margin-right: 10px;
+     width: 20px; height: 20px;
+     border-top-right-radius: 15px;
+     border-top-left-radius: 15px;
+     background-color: #0df3c1;
+        
+}
+.occupied{
+     background-color: #B4EB34;  }
+     .selected{
+           background-color: #E66832; }
+.container{
+     perspective: 1000px;  }
+.screen{
+     width: 100%; 
+     height: 80px; 
+     background-color: white;
+     transform: rotateX(-45deg); 
+     box-shadow:0px 0px 3px black;
+     margin: 30px 0px;
+
+}
+.row{ display: flex; }
+
+.seat:nth-of-type(2){ margin-right: 30px; }
+
+.seat:nth-last-of-type(2){margin-left: 30px;}
+.seat:not(.occupied):hover{
+     cursor: pointer;
+     transform: scale(1.25);
+}
+.legend .seat:hover{
+     cursor: default;
+     transform: scale(1.5);
+}
+
+.totals{margin-top: 30px; }
+    
+     p.totals span{color: #14ff9d; }
