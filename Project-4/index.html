@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css" >
+    
+  </style>
+  <title>Meal Generator</title>
+</head>
+
+<body>
+   <div class='container'>
+     
+
+    <h2> Meal Generator </h2>
+         <div class="flex">
+    <form id='submit' >
+       <input type="text" placeholder="Search for Recipe" class="search" id='search'>
+       
+       <button type="submit" class="search-btn" id='submit-btn'>
+        <i class="fas fa-search"></i> 
+          </button>
+    </form>
+   <!--  random meals generator -->
+   <button id='random' class='generate-btn'>
+    <i class="fas fa-random"></i> 
+    </button> 
+     </div>
+      
+    <div class="result-heading" id="result-heading"><h3></h3></div>
+     
+  <div class="meals" id="meals">
+   </div>
+   
+   
+   <div id='selected-meal' class="selected-meal"> </div>
+     </div>
+<script src="app.js"></script>
+</body>
+
+</html>
