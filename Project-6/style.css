@@ -1,0 +1,155 @@
+*{
+  box-sizing: border-box;
+  list-style: none;
+  
+}
+body{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  
+  
+  min-height: 100vh;
+  background-color: #ec407a;
+ /* background-color: #880e4f;*/
+/* background-color: #d81b60;*/
+  color: #fce4ec;
+  
+}
+.container{
+ 
+ width: 350px
+}
+h1{
+  letter-spacing: 1.5px;
+  margin:0;
+}
+h2{
+  text-align: center;
+  margin-top: 0rem;
+  
+}
+h3{
+  margin : 2.2rem o.5rem;
+  padding-bottom: 10px;
+  border-bottom: 1px solid  #ffebee ;
+}
+
+.balance{
+text-align: center;
+background-color: #880e4f; 
+padding: 2rem;
+margin-top: 1.8rem;
+  
+}
+.credit-debit-container{
+  
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+  margin: 20px 0;
+  background-color: #ff80ab;
+  
+  
+}
+.credit-debit-container>div{
+  flex: 1;
+  text-align: center
+}
+.credit{
+  color: limegreen;
+}
+.debit{
+  color: #b71c1c;
+}
+.credit-debit-container>:first-child{
+  
+  border-right: 1px solid #880e4f;
+  
+}
+.history{
+  margin-bottom: 1.8rem; 
+
+padding: 0;
+}
+.history li{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0.5rem;
+  margin: 1rem 0;
+  background-color: #fff;
+}
+
+.history li.credit{
+  
+  border-right:10px solid #16C79A;
+}
+.history li.debit{
+  border-right: 10px solid red;
+}
+.delete-btn{
+  background-color: #BE0000;
+  border: 0;
+  color: white;
+  font-size: 1.1rem;
+  line-height: 1.1rem;
+  position: absolute;
+  padding: 0.3rem 0.4rem;
+  top: 14%;
+  left: -1.4rem;
+  opacity: 0;
+  transition: opacity 0.5s ease
+  
+}
+ .history  li:hover .delete-btn{
+   opacity:1;
+ }
+.form-control form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+}
+label{
+  margin-bottom: 0.4rem
+  
+}
+
+input{
+  display: block;
+  padding: 0.6rem;
+  border-radius: 0.3rem;
+  border: 0;
+  outline: 0;
+  margin-bottom: 0.6rem;
+  
+}
+.btn{
+  background-color: #d81b60;
+  border: 0;
+  padding: 0.5rem;
+  font-size: 1.1rem;
+  border-radius: 0.2rem;
+  margin-top: 0.8rem;
+  color: white;
+  width: 100%;
+  
+  
+}
+
+/* media query for mobile devices */
+ @media screen and (max-width: 530px){
+   .balance{
+     padding: 1rem;
+   }
+   .credit-debit-container{
+     padding: 10px;
+   }
+   .container{
+     width: 85%;
+   }
+ }
+
+
