@@ -51,16 +51,16 @@ let creditBalance = Transactionhistory.map(transaction=>{
  
  creditBalance = Math.max(...creditBalance)
  console.log(creditBalance)
- creditBalance = creditBalance==-Infinity ? 0: creditBalance
- console.log('after condition',creditBalance)
- //if(creditBalance===-Infinity){
-   creditBalance.innerText=0;
-   return 0
- //}else{
-  credit.innerText= `+$${creditBalance}`
-  console.log('after inner text',creditBalance)
-  return creditBalance
+ creditBalance = creditBalance===-Infinity ? 0:creditBalance
+ credit.innerText= `$+${creditBalance}`
  
+ //if(creditBalance===-Infinity){
+  // creditBalance.innerText=0;
+  // return creditBalnce
+ //}else{
+ //credit.innerText= creditBalance
+//  console.log('before return',creditBalnce)
+ return creditBalance;
   }
  // function to count debit amount
  function debitCounter () {
@@ -72,7 +72,7 @@ let creditBalance = Transactionhistory.map(transaction=>{
      }
   
    })
-   console.log(debit)
+   
    // to remove undefined from debitBalance array
    debitBalance= debitBalance.filter(balance=> balance !==undefined)
    console.log(debitBalance)
@@ -82,15 +82,16 @@ let creditBalance = Transactionhistory.map(transaction=>{
    console.log('after min math',debitBalance)
    console.log(debitBalance)
    if(debitBalance===Infinity){
-     debit.innerText=0;
+     debit.innerText='$ 0';
      balance.innerText= creditCounter()+0
    }else{
    // add to dom min value or display on screen
    
-   debit.innerText= debitBalance;
-   console.log(creditCounter())
-   balance.innerText= creditCounter()+debitBalance
-   console.log(debitBalance)
+   debit.innerText= `$${debitBalance}`;
+  // here creditCounter function return creditBalance
+  //updated total balance 
+  
+   balance.innerText='$'+(creditCounter()+debitBalance);
    }
  }
  
@@ -115,7 +116,14 @@ function addTransaction () {
   if(description.value==='' || amount.value===''){
   return  alert('please complete fill the form')
   }
-  let transaction = {description:description.value,amount:amount.value}
+  let transaction = {
+    
+    description:description.value,
+    /* convert amount value from string to integer using
+    parseInt method */
+    amount:parseInt(amount.value)
+    
+  }
   Transactionhistory=[...Transactionhistory,transaction]
 //  Transactionhistory.push(transaction)
 
@@ -132,6 +140,4 @@ function deleteTransaction (id){
 }
 // listen for click to add transaction form
 submitTransaction.addEventListener('click',addTransaction);
-// listen for click to delete transaction history
-//deleteBtn.addEventListener('click',deleteTransaction)
 

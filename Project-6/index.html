@@ -10,41 +10,42 @@
 
 <body>
   <div class="container">
-    
+
     <h2>Expense Tracker</h2>
-     <div class="balance">
-       <h2>Balance</h2>
-      <h1>$300</h1>
-       
-     </div>
-     <div class="credit-debit-container">
-       <div>
-         <h4>Credit</h4>
-         <p class="credit" id="debit-balance">+$78</p>
-       </div>
-       <div>
-         <h4>Debit</h4>
-         <p class="debit" id="credit-balance">-$69</p>
-       </div>
-     </div>
-     <h3>History</h3>
-       <ul class="history">
-         <li class="credit">salary <span>$+49</span>
-         <button class="delete-btn">x</button></li>
-       </ul>
-     
-     <div class="form-control">
-       <h3>Add Transaction</h3>
-       <form>
-         <label id="description">Description</label>
-         <input type="text" id="description" placeholder="Write Description">
-         <label id="amount">Amount</label>
-         <input type="number" id="amount" placeholder="Add Amount">
-       </form>
-       <button type="submit" id='add-transaction' class="btn">Add Transaction</button>
-     </div>
+    <div class="balance">
+      <h2>Balance</h2>
+      <h1 id="balance"></h1>
+
+    </div>
+    <div class="credit-debit-container">
+      <div>
+        <h4>Credit</h4>
+        <p class="credit" id="credit">+$78</p>
+      </div>
+      <div>
+        <h4>Debit</h4>
+        <p class="debit" id="debit">-$69</p>
+      </div>
+    </div>
+    <h3>History</h3>
+    <ul class="history">
+      <li class="credit">salary <span>$+49</span>
+        <button class="delete-btn">x</button>
+      </li>
+    </ul>
+
+    <div class="form-control">
+      <h3>Add Transaction</h3>
+      <form id="submit">
+        <label for="description">Description</label>
+        <input type="text" id="description" placeholder="Write Description">
+        <label for="amount">Amount</label>
+        <input type="number" id="amount" placeholder="Add Amount">
+      </form>
+      <button type="submit" id='add-transaction' class="btn">Add Transaction</button>
+    </div>
   </div>
-<script src="App.js"></script>
+  <script src="App.js"></script>
 </body>
 
 </html>
