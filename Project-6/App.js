@@ -9,7 +9,7 @@ const amount = document.getElementById('amount');
 const submit = document.getElementById('submit');
 const submitTransaction = document.getElementById('add-transaction')
 const deleteBtn= document.querySelector('.delete-btn');
-console.log(deleteBtn)
+
 //  History Array for description and amount
 let Transactionhistory = [
 
@@ -49,8 +49,7 @@ let creditBalance = Transactionhistory.map(transaction=>{
     
  creditBalance = creditBalance.filter(balance=> balance!==undefined )
  
- creditBalance = Math.max(...creditBalance)
- console.log(creditBalance)
+ creditBalance = Math.max(...creditBalance);
  creditBalance = creditBalance===-Infinity ? 0:creditBalance
  credit.innerText= `$+${creditBalance}`
  
@@ -75,12 +74,9 @@ let creditBalance = Transactionhistory.map(transaction=>{
    
    // to remove undefined from debitBalance array
    debitBalance= debitBalance.filter(balance=> balance !==undefined)
-   console.log(debitBalance)
-   
+  
   // find max value in arrray
    debitBalance = Math.min(...debitBalance)
-   console.log('after min math',debitBalance)
-   console.log(debitBalance)
    if(debitBalance===Infinity){
      debit.innerText='$ 0';
      balance.innerText= creditCounter()+0
@@ -109,7 +105,15 @@ let creditBalance = Transactionhistory.map(transaction=>{
   
   }
   
-displayHistory()
+
+// function to create id for eveey Transaction
+function idcreate(){
+    
+    let id= Math.random()*10000
+  return  id =Math.floor(id)
+  
+  }
+  
 // function to add transaction in transaction array
 function addTransaction () {
   // check for empty value
@@ -117,7 +121,7 @@ function addTransaction () {
   return  alert('please complete fill the form')
   }
   let transaction = {
-    
+    id: idcreate(),
     description:description.value,
     /* convert amount value from string to integer using
     parseInt method */
@@ -126,18 +130,24 @@ function addTransaction () {
   }
   Transactionhistory=[...Transactionhistory,transaction]
 //  Transactionhistory.push(transaction)
-
+description.value='';
+amount.value= '';
   displayHistory()
   
 }
+
 // function to delete transaction
 function deleteTransaction (id){
   
  Transactionhistory= Transactionhistory.filter(transaction=> transaction.id !== id)
   
-  console.log(Transactionhistory)
   displayHistory();
 }
+// function to execute whole App
+function main(){
+  displayHistory()
+}
+main();
 // listen for click to add transaction form
 submitTransaction.addEventListener('click',addTransaction);
 
