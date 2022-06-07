@@ -10,29 +10,51 @@ body{
 .container{
 background-color: #ff4c29;
   display: flex;
+  justify-content: flex-end;
   border-radius:0.5rem;
   margin-top: 6rem;
   padding:1.2rem;
   position: relative;
-  
+  z-index: 10;
   
   
 }
 .album-art{
   width: 150px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
+  position: relative;
   
 
 }
 .album-art img{
   border-radius: 50%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
   height: 150px;
   width: 150px;
   object-fit: cover;
+  animation: rotate 3s linear infinite;
+  animation-play-state: paused;
+ /* display: none;*/
 
 }
+.container.play img{
+  animation-play-state: running;
+}
+@keyframes rotate{
+  from{
+    transform: rotate(0deg)
+  }
+  to{
+   transform:rotate(360deg)
+    
+  }
+}
 .nav{
+   padding: 0 1rem;
+}
+.nav-button{
+  margin-left: 1rem;
   
 }
+
