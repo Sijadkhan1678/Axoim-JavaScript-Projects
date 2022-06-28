@@ -51,7 +51,7 @@ let creditBalance = Transactionhistory.map(transaction=>{
  
  creditBalance = Math.max(...creditBalance);
  creditBalance = creditBalance===-Infinity ? 0:creditBalance
- credit.innerText= `$+${creditBalance}`
+ credit.innerText= `$ ${creditBalance}`
  
  //if(creditBalance===-Infinity){
   // creditBalance.innerText=0;
