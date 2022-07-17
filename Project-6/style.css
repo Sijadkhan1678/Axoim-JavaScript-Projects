@@ -22,7 +22,7 @@ body{
  background-color: hotpink;
  border-radius: 1rem;
  padding: 1.3rem;
- width: 350px
+ width: 480px
 }
 h1{
   letter-spacing: 1.5px;
@@ -76,6 +76,7 @@ margin-top: 1.8rem;
 .history{
   margin-bottom: 1.8rem; 
   padding: 0;
+  
 }
 .history li{
   position: relative;
@@ -84,6 +85,7 @@ margin-top: 1.8rem;
   padding: 0.5rem 0.5rem;
   margin: 1rem 0;
   background-color: pink;
+  border-radius: 0.3rem;
 }
 
 .history li.credit{
