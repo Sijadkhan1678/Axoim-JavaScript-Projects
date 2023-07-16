@@ -1,107 +1,101 @@
 *{
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 :root{
     --modal-duration: 1s;
-    --primary-color: #227093;
-    --secondary-color: #d1ccc0;
+    --primary-color: rgb(250, 101, 2);
+    --secondary-color: rgb(214, 124, 7);
 }
 body{
     margin: 0;
+
     transition: transform 0.5s ease;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-body.show{
-transform: translateX(20%);
-
-}
+body.show{ transform: translateX(200px); }
 .nav{
-    /* background-color: var(--primary-color); */
+
+    background-color: var(--primary-color);
     position: fixed;
-    width: 400px;
+    width: 200px;
     height: 100vh;
     left: 0;
-
     top:0;
-    transform: translateX(-100%);
-  z-index: 100;
+    transform: translateX(-200px);
+    z-index: 100;
 }
 
 .dash{
     display: block;
-    
-    /* left: 20px; */
-    /* top: 20px; */
-    /* padding: 22px; */
     width: 24px;
-    background-color: rgb(214, 124, 7);
+    background-color: var(--secondary-color);
     height: 4px;
-    
     margin-top: 4px;
 }
 #menu{ 
     position: absolute;
     cursor: pointer;
     border: 0;
-
     outline: 0;
-     position: absolute;
-     background-color: transparent;
-     top: 50px;
-    /* background-color: yellow; */
-     left: 40px;
+    position: absolute;
+    background-color: transparent;
+    top: 50px;
+    left: 40px;
      
 }
-.nav ul{
- text-align: center;
-  margin: 0;
-  padding: 0;
+nav ul {
+    padding: 0;
+    list-style-type: none;
+    margin: 0;
+    color: whitesmoke;
+    text-align: center;
 }
-.nav div{
-  border-radius: 50%;
-  text-align: center;
-}
+
+.nav div{ text-align: center; }
 
 .nav div img{
-     width: 100px;
-    padding: 5px;
+    border-radius: 50%;
+     width: 80px;
+     height: 80px;
+     object-fit: cover;
+     object-position: bottom;
+    padding: 10px 10px;
 }
 
-.nav ul li{
-    text-transform: uppercase;
-    list-style-type: none;
-   border-bottom: 2px solid black;
- padding: 20px;
+.nav ul li {
+    border-bottom: 2px solid rgba(138, 0, 0, 0.1);
+    padding: 20px;  
 }
+
 .nav ul li a{
-    color: rgb(0, 0, 0);
+    color: white;
     text-decoration: none;
 }
-.nav ul li:first-of-type{
-border-top: 2px solid rgba(0, 0, 0, 0.733);
-}
-.nav ul li a:hover{
-    text-decoration: underline;
+
+nav ul li:first-of-type {
+    border-top: 2px solid rgba(138, 0, 0, 0.1);
 }
 
 /* here start styling header coomponents */
+
 .header{
-    /* position: relative; */
-    background-color: var(--primary-color);
+    
+   background-color: var(--primary-color);
    padding: 5px;
-    height: 100vh;
-    text-align: center;
-    background-image: url(./images/hero.jpg);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-position: 100% 0%;
-    background-attachment: scroll;
-    /* height: 70vh; */
+   height: 100vh;
+   text-align: center;
+   background-image: url(./images/hero.jpg);
+   background-repeat: no-repeat;
+   background-size: 100% 100%;
+   background-position: 100% 0%;
+   background-attachment: scroll;
    color: rgb(17, 11, 11);
 }
 .header-content{
   
-  margin-top: 90px;  
+  margin-top: 15%;  
 }
 .header-content h1{
     
@@ -112,35 +106,42 @@ border-top: 2px solid rgba(0, 0, 0, 0.733);
     padding: 2px 30px;
 }
  
+button {
+    background-color: var(--secondary-color);
+    border: 0;
+    border-radius: 5px;
+    
+    cursor: pointer;
+    padding: 8px 10px;
+}
+
 .cta{
-    color: rgb(8, 0, 15);
+    color: white;;
     padding: 13px 20px;
     font-size: 19px;
     outline: none;
     border: 0;
     border-radius: 5px;
     margin-top: 12px;
-    background-color: rgb(250, 101, 2);
+    background-color: var(--primary-color);
 }
 /* here start styling main section and its childeren */
 main{
+    max-width: 100%;
     width: 800px;
-    width: 100%;
+    
    text-align: center;
-    /* display: flex;
+     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: 30px; */
     margin: 0 auto;
+    margin-top: 30px; 
 }
 
 .about-me {
-    width: 80%;
+    
     text-align: center;
     margin: 2rem auto;
-}
-.about-me  p{
-/* padding: 3px 30px; */
 }
 
 .project ul{
@@ -151,84 +152,90 @@ main{
     padding: 0;
 }
 .project ul li{
-    padding: 20px;
-    
-
+    padding: 10px;
     
 }
+
 .modal-container{
-    /* display: none; */
+    
     background-color: rgba(0,0,0,0.6);
     position: fixed;
     top: 0;
     left: 0;
     bottom: 0;
-       right: 0;
+    right: 0;
     color: white;
     display: none;
 }
+
 .modal-container.show-modal{
     display: block;
+}
+
+.modal-header {
+        
+    padding: 13px;
+    background-color: var(--secondary-color);
+}
+.modal-header h3 {
+    margin-left: 0.3rem;
 }
 .close{
     position: absolute;
     right: 0;
+    color: white;
+    background-color: transparent;
     top: 0;
     font-size: 24px;
     padding: 5px 9px;
 }
-.modal{
-      transform: translate(-50%,-50%);
-       top: 50%;
-     left: 50%;
-      overflow: hidden;
-     position: absolute;
-     width: 390px;
-     max-width: 100%;
-     animation-name: modalopen;
-     animation-duration: var(--modal-duration);
-   background-color: rgb(69, 121, 151);
+.modal {
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    width: 400px;
+    
+animation-name: modalopen;
+    animation-duration: var(--modal-duration);
 }
-.modal-content{
-    display: flex;
-    justify-content:center;
-    flex-direction: column;
-    align-items: center;
-}
-.modal-content h2{
-    margin-bottom: 0;
-    padding: 0;
 
-}
-.form{
+.modal-content {
     padding: 20px;
 }
-.form input{
-    width: 100%;
-    width: 300px;
-    padding: 9px 10px;
-    border-radius: 6px; 
-    border:2px solid rgb(96, 96, 99);
+
+
+.modal-form div {
+    margin: 15px 0;
 }
-.form div{
-    padding: 20px 10px;
-}
-.form div label{
-   margin-bottom: 6px;   
+
+.modal-form label {
     display: block;
+    margin-bottom: 5px;
 }
-.submit{
-    margin-left: 9px;
-    font-size: 15px;
 
-
+.modal-form input {
+    padding: 10px;
+    width: 100%;
 }
+
+.submit{ font-size: 16px; }
 
 @keyframes modalopen{
     from{
+
     opacity: 0;
+
     }
+
     to{
-opacity: 1;
+
+    opacity: 1;
+
     }
 }
