@@ -1,0 +1,243 @@
+
+
+
+.post{
+    width: 100%;
+    padding: 29px;
+    overflow: hidden;
+    clear: both;
+    background-color: aqua;
+}
+.article-card{
+    background-color: rgb(80, 80, 105);
+    max-height: auto;
+    float: left;
+    width: 13%;
+    padding: 3px;
+}
+
+.thumbnail img{
+width: 100%;
+
+
+}
+body{
+    
+    flex-direction: column;
+
+    margin: 0px;
+}
+.container{
+    
+    box-sizing: border-box;
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     background-color: brown;
+     display: flex;
+     justify-content: center;
+     font-size: 15px;
+     align-items: center;
+     
+}
+.menue{
+    display: inline;
+}
+.menue li{  
+        
+      display: inline-block;
+      list-style: none;
+      padding: 2px;
+      margin-left: 9px;
+}
+.menue li a{
+    text-decoration: none;
+    padding: 8px;
+    color: cornsilk;
+}
+.menue li a:hover{
+    color: darkblue;
+    transform: 2s;
+
+}
+
+
+button{
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: 9px;
+    border: none;
+    border-radius: 8px;
+      padding: 10px 40px;     
+
+}
+button:hover{
+      background-color: rgb(3, 64, 177);
+      color:cornsilk;
+}
+.heading{
+    position: relative;
+    
+   background-color: rgb(221, 226, 226); 
+}
+.heading img{
+    width: 100%;
+    
+}
+.main-heading{
+ position: absolute;
+ top: 12rem;
+ bottom: 0;
+ left: 0;
+ right: 0;
+ color: black;
+ text-align: center;
+ 
+ 
+}
+.main-heading h1{
+color: rgb(243, 2, 2);
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+.card_container{
+      
+      width: 250px;
+      border: 2px solid rgb(250, 173, 31);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      
+}
+.service-container{
+    
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+.product-container{
+    border: 2px solid black;
+    box-sizing: border-box;
+    border-radius: 6px;
+    width: 300px;
+    margin-left: 50px;
+    padding: 10px;
+    
+}
+
+.h-product h1{
+    text-align: center;
+    margin: 0px;
+    padding: 7px;
+}
+.cover img{
+    width: 50%;
+    margin-left: 70px;
+}
+.desc{ text-align: center;}
+.review ul{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+.review ul li{
+    margin-left: 8px;
+}
+.button button{
+    width: 100%;
+    background-color: teal;
+    color: white;
+}
+.button button:hover{
+    color: whitesmoke;
+    background-color:rgb(250, 173, 31)
+}
+.main{
+    padding: 40px;
+    margin-top: 30px;
+   background-color: rgb(128, 128, 128);
+}
+.main h1{
+    text-align: center;
+}
+.main-container{
+    margin-top: 48px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.content{
+    width: 40%;
+
+}
+.content p{
+    color: white;
+}
+.article-box{
+height: auto;
+}
+.article-box h1{
+    text-align: center;
+    text-transform: uppercase;
+
+}
+article{
+    
+  margin-left: 160px;  
+
+}
+.card{
+    float: left;
+    padding: 14px; 
+    width: 25%;
+}
+
+.para{
+    text-align: center;
+    
+    word-spacing: 1.9pt;
+}
+.box a{
+    text-align: right;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    display: block;
+    
+    
+}
+.main{
+clear: both;
+}
+.parent{
+     
+     
+    margin-top: 19px;
+    overflow: hidden;
+    width: 100%;
+    
+    
+}
+.wraper{
+    overflow: hidden;
+    top: 26px;
+    position: relative;
+    left: 18%;
+}
+.card-container{
+    float: left;
+    width: 25%;
+    margin-left: 18px;
+    padding: 15px;
+
+}
+
+
+
+
+
+
