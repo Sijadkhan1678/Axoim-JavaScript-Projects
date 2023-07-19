@@ -1,0 +1,461 @@
+*{
+   font-family: sans-serif;
+    box-sizing: border-box;
+    
+}
+body{
+  
+    margin: 0;
+    
+}
+.black{
+  margin-left: 12px;
+  color: black;
+  font-weight: 450;
+  font-size: 3.9rem;
+}
+.row h2::before{
+  font-weight: 300;
+  color: #ffc107;
+  content: "our";
+  text-transform: uppercase;
+  border-bottom: 4px solid black;
+  font-size: 3.5rem;
+  
+}
+.sec-container{
+     padding: 0px;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    background-color: #fff;
+}
+.container{
+   
+    /* width: 83%;  */
+    margin: 35px;
+    
+}
+.row{
+  margin: 40px;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    
+}
+.card{
+    
+  display: flex;
+  justify-content: center;
+padding:  0 15px;
+  /* padding: 20px 20px; */
+  
+}
+.product-box{
+
+  
+ background-color: #ddd;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 20px 25px;}
+    
+    .product-box:hover{
+      background-color: #ffc107;;
+    }
+.product-box h3{
+  font-size: 16px;
+
+
+}    
+.product-box span{
+  
+font-size: 20px;
+}
+
+
+/* Header Section */
+.header{
+  background-color: #ffc107;
+  padding: 16px;
+}
+.text-right{
+  text-align: right;
+  margin-right: 100px;
+
+}
+/* menue header */
+.menue{
+  
+  padding: 20x 12px;
+}
+.menue-container{
+  
+  display: flex;
+  padding: 2rem 2.5rem;
+  align-items: center;
+  justify-content: space-between;
+  
+  margin: 0px 79px;
+  
+}
+.btn{
+  background-color: #ffc107;
+  padding: 0.8rem 2.4rem;
+  border-radius: 0.4rem;
+  font-size: 0.8rem;
+}
+
+.nav{
+  display: flex;
+  
+  
+}
+.home{
+  color: #ffc107;
+
+}
+li{
+  color: black;
+list-style: none;
+}
+a{color: black;
+  text-transform: uppercase;
+  padding: 12px; 
+  text-decoration: none;
+}
+.slider-section{
+  position: relative;
+  width: 100%;
+}
+.slider-content{
+  position:absolute;
+  display: inline;
+  bottom: 8%;
+  right: 55%;
+  padding: 0.9 1rem 0rem;
+}
+.slider-section img{
+  width: 100%;
+  height: 470px;
+}
+.slider-content h1{
+  font-weight: 300;
+  font-size: 5.3rem;
+  margin-bottom: 0;
+}
+.black{
+  margin: 0;
+  font-weight:700;
+  font-size:5rem;
+
+}
+.yellow{
+color: #ffc107;
+font-size: 5.1rem;
+font-weight: 700;
+margin-top: 0;
+}
+.slider-content p{
+padding: 0.5rem 0rem ;
+margin-top: 0;
+  margin-bottom: 2rem;
+}
+.product-btn{
+  border-bottom-right-radius: 1.4rem;
+  border-top-left-radius: 1.6rem;
+  border-bottom-left-radius: 1.6rem;
+  padding: 0.9rem 1.5rem;
+  background-color: #ffc107;
+  color: white;
+
+  
+  margin-left: 2rem;
+
+}
+
+.product-btn:hover{
+background-color: black;
+}
+/* class for color */
+.color-y{ 
+  color:#ffc107;
+  font-size: 3.0rem;
+  font-weight: 500;
+  padding-right: 1rem;
+}
+.color-b{
+  font-weight: 500;
+color: black;
+font-size: 3.0rem;
+}
+.para{
+   font-weight: 500;
+  font-size: 1.5rem;
+}
+/* service section start */
+.service-section{
+   padding-top: 2rem;
+   
+}
+.service-container{
+  
+ background-color: #ffc107;
+}
+.wraper{
+  
+  padding: 2rem 1rem;
+  box-shadow: 4px 5px 4px #ddd;
+  background-color: #fff;
+ width: 83%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+ flex-wrap: wrap;
+}
+.wraper a{
+  border: 2px solid #ffc107;
+  color: black;
+  margin-top: 2rem;
+  padding: 1rem 3rem;
+  
+}
+.wraper a:hover{
+  background-color: #ffc107;
+}
+.text-center{
+  text-align: center;
+}
+.center-container{
+  
+  text-align: center;
+  display: flex;
+   /* width: 83.2%; */
+   /* margin: 0 auto; */
+  
+   
+}
+
+
+
+.service-card{
+  margin-top: 0.5rem;
+  /* background-color: rebeccapurple; */
+  /* width: 40%; */
+
+
+}
+.service-card h3{
+  margin-top: 1.5rem;
+  font-weight: 100;
+  font-size: 1.6em;
+}
+.service-card p{
+    
+  line-height: 1.7;
+  font-size: 1em;
+}
+/* service proccess section start  */
+.proccess-section{
+  padding-top: 5rem;
+}
+.proccess-container{
+  width: 95%;
+  margin: 0 auto;
+}
+.proccess-card{
+  box-shadow: 2px 7px 13px 8px rgb(221, 221, 221);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.9rem 1.3rem;
+  width: 30%;
+  margin: 0.9rem;
+}
+
+.proccess-card h5{
+  
+  margin-top: .9rem;
+  margin-bottom: .3rem;
+  font-weight: 500;
+  font-size: 1.5em;
+}
+.proccess-card p{
+  font-size: 1rem;
+  line-height: 1.8;
+  text-align: center;
+}
+/* ###########client section start #############*/
+/* client section and yellow container maincontainer*/
+.mainContainer{
+  content: " ";
+  background-image: url(bg.jpg);
+  background-color: #ffc107;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-color: #ddd;
+ width: 100%;
+
+
+}
+.client-container{
+  
+  width: 82%;
+  margin: auto;
+ 
+}
+.client-container h4{
+  font-size: 3.4rem;
+  font-weight: 100;
+}
+.client-container p{
+  margin-top: 50px;
+  line-height: 1.7;
+}
+.information{
+  display: flex;
+  
+  align-items: center;
+
+}
+.personal{
+  margin-left: 2rem;
+  
+}
+.personal em{
+  font-size: 1.9em;
+  margin-left: .9rem;
+}
+.personal span{
+  font-size: 1.1em;
+  
+}
+.map{
+  position: relative;
+ 
+}
+.yellow-container{
+  position: absolute;
+  top:0%;
+  left: 10%;
+  border-radius: 0.4rem;
+  width: 84%;
+  margin: auto;
+  background-color: #ffc107;
+padding: 1rem 2rem;
+}
+.yellow-container{
+  display: flex;
+  
+} 
+.box{
+  display: flex;
+  align-items : center;
+}
+.box h3{
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+.box p{
+  font-size: 1.2rem;
+  font-weight: 530;
+  
+}
+.box div img{
+  
+  display: inline;
+  margin-left: 0.8rem;
+  width: 4rem;
+  height: 2rem;
+}
+.RightButton{
+  align-self:center;
+  margin-top: 2rem;
+  
+  margin-left: 15rem;
+}
+.RightButton a{
+  
+  padding: 1.5rem 8rem;
+  border-radius: 3rem;
+  color: white;
+  background-color: black;
+  font-size: 18px;
+  font-weight: 700;
+
+  
+}
+.footer{
+  background-color: rgb(39, 36, 36);
+  
+}
+.main-container{
+  color :white;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+  width: 90%;
+  margin: auto;
+  
+}
+.main-container h3{
+  font-size: 1.9rem;
+  font-weight: bold;
+}
+.main-container a{
+  font-size: 0.9rem;
+  font-weight: 600;
+  
+}
+
+.contact p{
+  color: white;
+line-height: 1.9;
+margin-top: 0;
+font-weight: 700;
+}
+.link{
+   color: white;
+  width: 20%;
+  display: flex;
+  flex-flow: column nowrap;
+  text-align: center;
+}
+.link a{
+   color: white;
+  display: inline-block;
+  margin: 0;
+}
+.service{
+   color: white;
+  width: 30%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.service a{
+   color: white;
+  margin: 0;
+  text-align: center;
+}
+.about{
+   color: white;
+ width:  28%;
+}
+
+.about p{
+   color: white;
+  font-weight: 700;
+  padding: 0.3rem 1.9rem;
+}
